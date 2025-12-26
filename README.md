@@ -50,13 +50,11 @@ bütünlüğünü sağlayan tetikleyici (trigger) ve saklı yordam (stored proce
 
 4\. PostgreSQL bağlantı bilgilerinizi (`Host`, `Database`, `Username`, `Password`) girin.
 
-5\. Veritabanını oluşturmak için `schema.sql` dosyasını PostgreSQL üzerinde çalıştırın.
+5\. Veritabanını oluşturmak için `schema.sql,function\_triggers.sql,seed.sql` dosyasını PostgreSQL üzerinde çalıştırın.
 
 6\. Projeyi Visual Studio ile açarak çalıştırın.
 
 
-
-\## Güvenlik Notu
 
 Veritabanı bağlantı bilgileri güvenlik nedeniyle repository içerisinde tutulmamaktadır. 
 
@@ -66,7 +64,5 @@ bu dosya `.gitignore` aracılığıyla GitHub dışına çıkarılmıştır.
 
 
 
-\## Not
 
-Bu proje eğitim ve akademik amaçlarla geliştirilmiştir.
 
