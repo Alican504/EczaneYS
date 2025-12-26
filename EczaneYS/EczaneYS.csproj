@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEDC88C4-DBEA-4579-8E82-A040A3F03FF4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EczaneYS</RootNamespace>
+    <AssemblyName>EczaneYS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.10.0.1\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=10.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.10.0.1\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=10.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.10.0.1\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=10.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.FileExtensions.10.0.1\lib\net462\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=10.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Json.10.0.1\lib\net462\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=10.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.10.0.1\lib\net462\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=10.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Physical.10.0.1\lib\net462\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=10.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileSystemGlobbing.10.0.1\lib\net462\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=10.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.10.0.1\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.1.13.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.1.13\lib\net461\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Pipelines, Version=10.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.10.0.1\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.10.0.1\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=10.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.10.0.1\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DBHelper.cs" />
+    <Compile Include="Forms\Admin\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_AddCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_AddCustomer.Designer.cs">
+      <DependentUpon>Admin_AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_CustomerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_CustomerList.Designer.cs">
+      <DependentUpon>Admin_CustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_EditCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_EditCustomer.Designer.cs">
+      <DependentUpon>Admin_EditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_ReportSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_ReportSales.Designer.cs">
+      <DependentUpon>Admin_ReportSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_UserControl.Designer.cs">
+      <DependentUpon>Admin_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_AddCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_AddCategory.Designer.cs">
+      <DependentUpon>Admin_AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_AddMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_AddMedicine.Designer.cs">
+      <DependentUpon>Admin_AddMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_AddSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_AddSupplier.Designer.cs">
+      <DependentUpon>Admin_AddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_CategoryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_CategoryList.Designer.cs">
+      <DependentUpon>Admin_CategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_EditUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_EditUser.Designer.cs">
+      <DependentUpon>Admin_EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_MedicineList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_MedicineList.Designer.cs">
+      <DependentUpon>Admin_MedicineList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_SaleList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_SaleList.Designer.cs">
+      <DependentUpon>Admin_SaleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_StockList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_StockList.Designer.cs">
+      <DependentUpon>Admin_StockList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_SupplierList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_SupplierList.Designer.cs">
+      <DependentUpon>Admin_SupplierList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_UserList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Controls\Admin_UserList.Designer.cs">
+      <DependentUpon>Admin_UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\DashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\DashboardControl.Designer.cs">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Auth\AuthContext.cs" />
+    <Compile Include="Forms\Auth\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Auth\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Personnel\PersonnelCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Personnel\PersonnelCustomer.Designer.cs">
+      <DependentUpon>PersonnelCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Personnel\PersonnelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Personnel\PersonnelForm.Designer.cs">
+      <DependentUpon>PersonnelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Personnel\PersonnelSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Personnel\PersonnelSale.Designer.cs">
+      <DependentUpon>PersonnelSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Personnel\Personnel_MedicineView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Personnel\Personnel_MedicineView.Designer.cs">
+      <DependentUpon>Personnel_MedicineView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Personnel\Personnel_StockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Personnel\Personnel_StockView.Designer.cs">
+      <DependentUpon>Personnel_StockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\PharmacistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\PharmacistForm.Designer.cs">
+      <DependentUpon>PharmacistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\PharmacistSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\PharmacistSale.Designer.cs">
+      <DependentUpon>PharmacistSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_LowStockAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_LowStockAlert.Designer.cs">
+      <DependentUpon>Pharmacist_LowStockAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_MedicineAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_MedicineAdd.Designer.cs">
+      <DependentUpon>Pharmacist_MedicineAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_MedicineUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_MedicineUpdate.Designer.cs">
+      <DependentUpon>Pharmacist_MedicineUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_MedicineView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_MedicineView.Designer.cs">
+      <DependentUpon>Pharmacist_MedicineView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_SaleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_SaleDetail.Designer.cs">
+      <DependentUpon>Pharmacist_SaleDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_SaleHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_SaleHistory.Designer.cs">
+      <DependentUpon>Pharmacist_SaleHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_SaleReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_SaleReturn.Designer.cs">
+      <DependentUpon>Pharmacist_SaleReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_StockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacist\Pharmacist_StockView.Designer.cs">
+      <DependentUpon>Pharmacist_StockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PermissionService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <EmbeddedResource Include="Forms\Admin\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_AddCustomer.resx">
+      <DependentUpon>Admin_AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_CustomerList.resx">
+      <DependentUpon>Admin_CustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_EditCustomer.resx">
+      <DependentUpon>Admin_EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_ReportSales.resx">
+      <DependentUpon>Admin_ReportSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_UserControl.resx">
+      <DependentUpon>Admin_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_AddCategory.resx">
+      <DependentUpon>Admin_AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_AddMedicine.resx">
+      <DependentUpon>Admin_AddMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_AddSupplier.resx">
+      <DependentUpon>Admin_AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_CategoryList.resx">
+      <DependentUpon>Admin_CategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_EditUser.resx">
+      <DependentUpon>Admin_EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_MedicineList.resx">
+      <DependentUpon>Admin_MedicineList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_SaleList.resx">
+      <DependentUpon>Admin_SaleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_StockList.resx">
+      <DependentUpon>Admin_StockList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_SupplierList.resx">
+      <DependentUpon>Admin_SupplierList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Controls\Admin_UserList.resx">
+      <DependentUpon>Admin_UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\DashboardControl.resx">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Auth\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Personnel\PersonnelCustomer.resx">
+      <DependentUpon>PersonnelCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Personnel\PersonnelForm.resx">
+      <DependentUpon>PersonnelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Personnel\PersonnelSale.resx">
+      <DependentUpon>PersonnelSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Personnel\Personnel_MedicineView.resx">
+      <DependentUpon>Personnel_MedicineView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Personnel\Personnel_StockView.resx">
+      <DependentUpon>Personnel_StockView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\PharmacistForm.resx">
+      <DependentUpon>PharmacistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\PharmacistSale.resx">
+      <DependentUpon>PharmacistSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\Pharmacist_LowStockAlert.resx">
+      <DependentUpon>Pharmacist_LowStockAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\Pharmacist_MedicineAdd.resx">
+      <DependentUpon>Pharmacist_MedicineAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\Pharmacist_MedicineUpdate.resx">
+      <DependentUpon>Pharmacist_MedicineUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\Pharmacist_MedicineView.resx">
+      <DependentUpon>Pharmacist_MedicineView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\Pharmacist_SaleDetail.resx">
+      <DependentUpon>Pharmacist_SaleDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\Pharmacist_SaleHistory.resx">
+      <DependentUpon>Pharmacist_SaleHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\Pharmacist_SaleReturn.resx">
+      <DependentUpon>Pharmacist_SaleReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacist\Pharmacist_StockView.resx">
+      <DependentUpon>Pharmacist_StockView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="appsettings.example.json" />
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PharmacyLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_to_cart_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addMedic_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close all jframe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashbord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MedicineValidation_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modifyMedicine_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharmacy_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sellMedicine_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signin_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signup_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets'))" />
+  </Target>
+</Project>
